@@ -18,9 +18,26 @@ Check Organizer
         <h4>Resumen</h4>
         <p><b>Total Personas:</b><span id="totalPart"></span></p>
         <p><b>Total Monto:</b><span id="totalMonto"></span></p>
+        <p><b>Total c/u:</b><span id="totalc/u"></span></p>
+
+
+        <table>
+            <thead>
+              <tr>
+                  <th>Apodo</th>
+                  <th>Pago</th>
+                  <th>Balance</th>
+              </tr>
+            </thead>
+    
+            <tbody id="tabla">
+              
+            </tbody>
+          </table>
+
     </div>
     <div class="modal-footer" style="background-color: rgb(255, 251, 227);;">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+        <a class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
     </div>
 </div>
 
@@ -55,40 +72,35 @@ Check Organizer
 
 
                 <div class="row">
-                    <form class="col s12">
+                    
 
                         <div id="participantes">
                             <div class="divider"></div>
                             <div class="row">
-                                <div class="input-field col s10">
+                                <div class="input-field col s7">
                                     <i class="material-icons prefix">account_circle</i>
                                     <input id="apodo1" type="text" class="validate">
                                     <label for="apodo1">Apodo</label>
                                 </div>
 
-                                <div class="input-field col s6">
+                                <div class="input-field col s5">
                                     <i class="material-icons prefix">attach_money</i>
                                     <input id="monto1" type="number" class="validate">
                                     <label for="monto1">Monto</label>
                                 </div>
 
-                                <div class="input-field col s6">
-                                    <i class="material-icons prefix">shopping_basket</i>
-                                    <input id="producto1" type="number" class="validate">
-                                    <label for="producto1">Producto</label>
-                                </div>
 
                             </div>
                         </div>
-                    </form>
+                    
                 </div>
 
 
 
 
                 <div class="row" style="margin-bottom: -1em;">
-                    <button class="col s5 btn waves-effect waves-light left green darken-1" type="submit"
-                        name="action" onclick="addPart()">Otro
+                    <button class="col s5 btn waves-effect waves-light left green darken-1"
+                        name="action" onclick="addPart(event)">Otro
                     </button>
 
 
