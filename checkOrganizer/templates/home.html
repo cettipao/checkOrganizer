@@ -6,6 +6,37 @@ Check Organizer
 
 {% block content %}
 <!-- Page Layout here -->
+<div class="fixed-action-btn">
+    <a class="btn-floating btn-large green">
+      <i class="large material-icons modal-trigger" data-target="modal1">check_box</i>
+    </a>
+  </div>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems, options);
+  });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.modal').modal();
+  });
+  </script>
+
 <div class="row">
 
     <div class="col s0 m2 l2">
@@ -31,7 +62,7 @@ Check Organizer
 
         <div class="card" style="background-color: rgb(255, 251, 227);">
             <div class="card-content">
-                <span class="card-title  grey-text text-darken-4">Participantes</span>
+                <span class="card-title activator grey-text text-darken-4">Participantes (1)<i class="material-icons right">more_vert</i></span>
 
                 <div id="participantes">
 
@@ -43,11 +74,6 @@ Check Organizer
                                     <input id="icon_prefix" type="text" class="validate">
                                     <label for="icon_prefix">Apodo</label>
                                 </div>
-                                <div class="col s2 valign-wrapper">
-                                    <a class="btn-floating btn-medium waves-effect waves-light green"><i class="material-icons">add</i></a>
-                                </div>
-
-
 
                                 <div class="input-field col s6">
                                     <i class="material-icons prefix">attach_money</i>
@@ -69,8 +95,8 @@ Check Organizer
                 </div>
 
                 <div class="row" style="margin-bottom: -1em;">
-                    <button class="col s6 activator btn waves-effect waves-light right green darken-1" type="submit"
-                        name="action">Resumen
+                    <button class="col s5 btn waves-effect waves-light left green darken-1" type="submit"
+                        name="action">Otro
                     </button>
 
 
@@ -78,9 +104,9 @@ Check Organizer
 
 
             </div>
-            <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Resumen<i class="material-icons right">close</i></span>
-                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            <div class="card-reveal" style="background-color: rgb(233, 255, 231);">
+                <span class="card-title grey-text text-darken-4">Ayuda<i class="material-icons right">close</i></span>
+                <p>Ayuda Wey</p>
             </div>
         </div>
 
